@@ -11,10 +11,15 @@ format:
     theme: [dark, css/custom.scss]
     fullscreen: true
     pdfexport: true
+    pointer:
+      color: '#8cd000q'
+      pointerSize: 16
 bibliography: references.bib
 csl: apa.csl
 editor_options: 
   chunk_output_type: console
+revealjs-plugins:
+  - pointer  
 ---
 
 ## Inhalte dieses Erklärvideos {.center .smaller}
@@ -379,11 +384,11 @@ $\tau_{\mathrm{b}} \left(X,Y \right)=\frac{\color{#8cd000}{n_{\mathrm{K}}}-\colo
 ## Eigenschaften Kendall's $\tau_{\mathrm{b}}$  {.center}
 ::: {.incremental}
 * Kendall's $\tau_{\mathrm{b}}$ beschreibt die Stärke der (negativen oder positiven) Assoziation zweier mindestens ordinalen Variablen
-* Kendall's $\tau_{\mathrm{b}}$ nimmt Werte zwischen null und eins an $(-1 \leq \tau_{\mathrm{b}} \leq 1)$. -1 impliziert die maximale negative Assoziation, 0 keine Assoziation und 1 die maximale positive Assoziation
-* Nach Cohen [-@cohen1988], gilt $\tau =.1$ (bzw. $\tau = -.1$) als kleiner Effekt und $\tau =.3$ (bzw. $\tau = -.3$) und $\tau =.5$ (bzw. $\tau = -.5$) als  starker Effekt
+* Kendall's $\tau_{\mathrm{b}}$ nimmt Werte zwischen -1 und 1 an $(-1 \leq \tau_{\mathrm{b}} \leq 1)$. -1 impliziert die maximale negative Assoziation, 0 keine Assoziation und 1 die maximale positive Assoziation
+* Nach Cohen [-@cohen1988], gilt $\tau =.1$ (bzw. $\tau = -.1$) als kleiner Effekt, $\tau =.3$ (bzw. $\tau = -.3$) als moderater und $\tau =.5$ (bzw. $\tau = -.5$) als starker Effekt
 :::
 
-## Visual Guessing Kendall's $tau_b$ {.center}
+## Visual Guessing Kendall's $\tau_b$ {.center}
 <iframe id="guessingkendall" src="https://sammerk.shinyapps.io/Visual_Guessing_tau/" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" id="iframe_container" frameborder="0" ></iframe>
 </center>
 <style>
@@ -392,7 +397,7 @@ $\tau_{\mathrm{b}} \left(X,Y \right)=\frac{\color{#8cd000}{n_{\mathrm{K}}}-\colo
 
 
 ## <!--Pearsons's r--> {.center .smaller}
-[{{< fa ruler >}} Assoziation zweier normalverteilter Variablen]{.em15 .c .imp}
+[{{< fa ruler >}} Assoziation zweier bivariat normalverteilter Variablen]{.em15 .c .imp}
 
 
 ## Förderungsumfang & -erfolg
@@ -489,7 +494,7 @@ ggsave("img/r7wide.svg", width = 7, height = 5)
 ```
 
 
-## Gleiche Daten - untersch. Steigung? {.center}
+## Gleiche Daten - untersch. Steigung?
 :::: {.columns}
 
 ::: {.column width='50%'}
@@ -1000,7 +1005,7 @@ plot +
 <iframe scrolling="no"
 src="https://www.geogebra.org/material/iframe/id/xj3vvgvp/szb/true/smb/false/sfsb/true/sri/true"
 width="523px"
-height="555px"
+height="540px"
 style="border:0px;" allowfullscreen>
 </iframe>
 :::
@@ -1014,6 +1019,14 @@ $$r_{x, y}=\frac{\sum_{i=1}^n\left(x_i-\bar{x}\right)\left(y_i-\bar{y}\right)}{\
 :::
 
 ::::
+
+
+## Eigenschaften Pearson's $r$  {.center}
+::: {.incremental}
+* Pearson's $r$  beschreibt die Stärke der (negativen oder positiven) Assoziation zweier bivariat normalverteilten Variablen
+* Pearson's $r$  nimmt Werte zwischen -1 und 1 an $(-1 \leq r \leq 1)$. -1 impliziert die maximale negative Assoziation, 0 keine Assoziation und 1 die maximale positive Assoziation
+* Nach Cohen [-@cohen1988], gilt $r =.1$ (bzw. $r = -.1$) als kleiner Effekt, $r =.3$ (bzw. $r = -.3$) als moderater und $r =.5$ (bzw. $r = -.5$) als starker Effekt
+:::
 
 ## Visual Guessing Pearson's $r$ {.center}
 <iframe id="guessingr" src="https://sammerk.shinyapps.io/Visual_Guessing_r/" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" id="iframe_container" frameborder="0" ></iframe>
